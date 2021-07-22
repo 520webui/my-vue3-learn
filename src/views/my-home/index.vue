@@ -41,7 +41,7 @@
             color: #fff;
             cursor: pointer;
             margin-left: 10px;
-            font-size: 12px;
+            font-size: 0.12rem;
         }
     }
 </style>

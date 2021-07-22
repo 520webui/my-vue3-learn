@@ -1,14 +1,7 @@
 const path = require('path');
 module.exports = {
     // 项目部署的基础路径
-    // 我们默认假设你的应用将会部署在域名的根部，
-    // 比如 https://www.my-app.com/
-    // 如果你的应用时部署在一个子路径下，那么你需要在这里
-    // 指定子路径。比如，如果你的应用部署在
-    // https://www.foobar.com/my-app/
-    // 那么将这个值改为 `/my-app/`
-    //publicPath: '/Reader/dist/',　　/*这个是我存放在github在线预览的Reader项目*/
-    //publicPath: '/Reader/dist/',　　/*这个是我存放在github在线预览的Reader项目*/
+    publicPath: './',
 
     // 将构建好的文件输出到哪里（或者说将编译的文件）
     outputDir: 'dist',
@@ -36,7 +29,7 @@ module.exports = {
     },
 
     // 是否在保存的时候使用 `eslint-loader` 进行检查。
-    // 有效的值：`ture` | `false` | `"error"`
+    // 有效的值：`true` | `false` | `"error"`
     // 当设置为 `"error"` 时，检查出的错误会触发编译失败。
     lintOnSave: true,
 
@@ -72,7 +65,7 @@ module.exports = {
         // 为所有的 CSS 及其预处理文件开启 CSS Modules。
         // 这个选项不会影响 `*.vue` 文件。
         //modules: false,
-        requireModuleExtension:false
+        requireModuleExtension: false
     },
 
     // 在生产环境下为 Babel 和 TypeScript 使用 `thread-loader`
@@ -107,6 +100,7 @@ module.exports = {
 
     // 三方插件的选项
     pluginOptions: {
+        // ...
         preProcessor: 'less',
         patterns: [
             path.resolve(__dirname, "./src/assets/less/global.less") // 这段是自己加的，根据自己文件的位置来修改,用于添加全局样式表

@@ -1,56 +1,63 @@
-@import "color-fontSize"; //全局颜色变量集
-@import "scrollbar"; //自定义滚动条样式
-@import "error"; //自定义滚动条样式
-@import "el-reset"; //自定义element-ui样式
-@import "FlareClusterLayer_v4"; //自定义element-ui样式
-@import "com-portal"; //项目公用样式
-@import "common"; //项目公用样式(9/7)
-@import "../fonts/syht/SourceHanSansCN-Bold-2.css";
-
-div {
-  font-family: 'BoldCondensed','SourceHanSansCN';
+body {
+  margin: 0;
+  /* font-family:'BoldCondensed','SourceHanSansCN', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+     sans-serif;*/
+  font-family:'BoldCondensed','SourceHanSansCN';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width:100%;
+  height:100%;
+  font-size: 0.18rem;
+  color:#fff;
 }
-/*img {
-  -webkit-filter: grayscale(100%); !* Chrome, Safari, Opera *!
-  filter: grayscale(100%);
-}*/
-body{
-  background: #112852;
-  color:@f-c10;
-  font-size: 0.014rem !important;
-  font-family: 'BoldCondensed','SourceHanSansCN';
+html {
+  width:100%;
+  height:100%;
 }
-blockquote, body, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul,.container  {
+.screen-content-wrapper{
+  width:100%;
+  height:100%;
+  position: relative;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote，th, td {
   margin: 0;
   padding: 0;
 }
-ul,li{
-  list-style-type: none;
-}
- *{
-  //  font-family: "Microsoft YaHei","微软雅黑";
-   font-family: 'BoldCondensed','SourceHanSansCN';
-   outline:none;
- }
 
-a:hover, a:focus {
-  color: #fff;
-   text-decoration: none;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-a {
-  color: #fff;
-  text-decoration: none;
+
+fieldset, img {
+  border: 0;
 }
-.clearfix:after { /* 清理浮动 */
-  visibility:hidden;
-  display:block;
-  font-size:0;
-  content:" ";
-  clear:both;
-  height:0;
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
 }
-.clearfix {zoom:1;}
-.clear{ clear:both}
+
+ol, ul {
+  list-style: none;
+}
+
+capation, th {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+i{
+  font-style: normal;
+}
 
 
 
