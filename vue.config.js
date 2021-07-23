@@ -60,7 +60,12 @@ module.exports = {
 
         // 为预处理器的 loader 传递自定义选项。比如传递给
         // sass-loader 时，使用 `{ sass: { ... } }`。
-        loaderOptions: {},
+        loaderOptions: {
+            less: {
+                prependData:`@import "./src/assets/less/global.less";`
+
+            }
+        },
 
         // 为所有的 CSS 及其预处理文件开启 CSS Modules。
         // 这个选项不会影响 `*.vue` 文件。
@@ -100,10 +105,12 @@ module.exports = {
 
     // 三方插件的选项
     pluginOptions: {
-        // ...
-        preProcessor: 'less',
-        patterns: [
-            path.resolve(__dirname, "./src/assets/less/global.less") // 这段是自己加的，根据自己文件的位置来修改,用于添加全局样式表
-        ]
+        'style-resources-loader': {
+            preProcessor: 'less',
+            patterns: [
+                path.resolve(__dirname, "./src/assets/less/global.less") // 这段是自己加的，根据自己文件的位置来修改,用于添加全局样式表
+            ]
+        }
+
     }
 }

@@ -1,6 +1,6 @@
 <template>
     <div class="index-warp">
-        <div @click="theOne">抛出vue2数据不实时变化的问题</div>
+        <div class="the-one" @click="theOne">vue2数据不实时变化问题</div>
         <div>2</div>
         <div>3</div>
         <div>4</div>
@@ -28,11 +28,11 @@
 
 <style scoped lang="less">
     .index-warp {
-        display: flex;
         width: 100%;
         height: 100%;
+        display: flex;
         div {
-            flex: 1;
+           flex: 1;
             width: 100px;
             height: 50px;
             text-align: center;
@@ -42,6 +42,9 @@
             cursor: pointer;
             margin-left: 10px;
             font-size: 0.12rem;
+        }
+        .the-one{
+            margin-left: 0;
         }
     }
 </style>

@@ -18,9 +18,9 @@
 
 <style lang="less" scoped>
     .the-one-warp{
-        width: 10rem;
-        height: 10rem;
-        background-color: #2c3e50;
+        width: 100%;
+        height: 100%;
+        background-color: tan;
         overflow: hidden;
         .goback{
             width: 100px;
