@@ -1,7 +1,7 @@
 <template>
     <div class="index-warp">
         <div class="the-one" @click="theOne">vue2数据不实时变化问题</div>
-        <div>2</div>
+        <div  @click="theTwo">2</div>
         <div>3</div>
         <div>4</div>
         <div>5</div>
@@ -17,10 +17,27 @@
 </template>
 
 <script>
+    import { useRouter } from "vue-router"
     export default {
-        methods: {
+       /* methods: {
             theOne() {
                 this.$router.push({path: '/the-one'});
+            },
+            theTwo() {
+                this.$router.push({path: '/the-two'});
+            }
+        }*/
+        setup(){
+            const router = useRouter(); // 第一步
+            let theOne=()=>{
+                router.push({path: '/the-one'});
+            };
+            let theTwo=()=>{
+                router.push({path: '/the-two'});
+            }
+            return{
+                theOne,
+                theTwo,
             }
         }
     }
