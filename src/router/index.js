@@ -15,6 +15,21 @@ const routes = [
     name: "the-two",
     component: () =>import( "@/views/the-two"),
   },
+  {
+    path: "/the-three",
+    name: "the-three",
+    component: () =>import( "@/views/the-three"),
+  },
+  {
+    path: "/the-four",
+    name: "the-four",
+    component: () =>import( "@/views/the-four"),
+  },
+  {
+    path: "/the-five",
+    name: "the-four",
+    component: () =>import( "@/views/the-five"),
+  },
 ];
 
 const router = createRouter({

@@ -2,9 +2,9 @@
     <div class="index-warp">
         <div class="the-one" @click="theOne">vue2数据不实时变化问题</div>
         <div  @click="theTwo">2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
+        <div @click="theThree">3</div>
+        <div @click="theFour">4</div>
+        <div @click="theFive">5</div>
         <div>6</div>
         <div>7</div>
         <div>8</div>
@@ -35,9 +35,22 @@
             let theTwo=()=>{
                 router.push({path: '/the-two'});
             }
+            let theThree=()=>{
+                router.push({path: '/the-three'});
+            }
+            let theFour=()=>{
+                router.push({path: '/the-four'});
+            }
+            let theFive=()=>{
+                router.push({path: '/the-five'});
+            }
+
             return{
                 theOne,
                 theTwo,
+                theThree,
+                theFour,
+                theFive,
             }
         }
     }
